@@ -20,7 +20,7 @@ You need git to clone the angular-seed repository. You can get git from
 [http://git-scm.com/](http://git-scm.com/).
 
 We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+its package manager (yarn) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
 ### Clone angular-seed
 
@@ -44,19 +44,19 @@ The `depth=1` tells git to only pull down one commit worth of historical data.
 We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
 us manage and test the application.
 
-* We get the tools we depend upon via `npm`, the [node package manager][npm].
+* We get the tools we depend upon via `yarn`, the [node package manager][yarn].
 * We get the angular code via `bower`, a [client-side code package manager][bower].
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
+We have preconfigured `yarn` to automatically run `bower` so we can simply do:
 
 ```
-npm install
+yarn install
 ```
 
 Behind the scenes this will also call `bower install`.  You should find that you have two new
 folders in your project.
 
-* `node_modules` - contains the npm packages for the tools we need
+* `node_modules` - contains the yarn packages for the tools we need
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
@@ -69,7 +69,7 @@ We have preconfigured the project with a simple development web server.  The sim
 this server is:
 
 ```
-npm start
+yarn start
 ```
 
 Now browse to the app at `http://localhost:8000/index.html`.
@@ -119,10 +119,10 @@ configuration file to run them.
 * the configuration is found at `karma.conf.js`
 * the unit tests are found next to the code they are testing and are named as `..._test.js`.
 
-The easiest way to run the unit tests is to use the supplied npm script:
+The easiest way to run the unit tests is to use the supplied yarn script:
 
 ```
-npm test
+yarn test
 ```
 
 This script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and
@@ -135,7 +135,7 @@ check that a particular version of the code is operating as expected.  The proje
 predefined script to do this:
 
 ```
-npm run test-single-run
+yarn run test-single-run
 ```
 
 
@@ -153,23 +153,23 @@ correctly. Therefore, our web server needs to be serving up the application, so 
 can interact with it.
 
 ```
-npm start
+yarn start
 ```
 
 In addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed
 project comes with a predefined script to do this:
 
 ```
-npm run update-webdriver
+yarn run update-webdriver
 ```
 
 This will download and install the latest version of the stand-alone WebDriver tool.
 
 Once you have ensured that the development web server hosting our application is up and running
-and WebDriver is updated, you can run the end-to-end tests using the supplied npm script:
+and WebDriver is updated, you can run the end-to-end tests using the supplied yarn script:
 
 ```
-npm run protractor
+yarn run protractor
 ```
 
 This script will execute the end-to-end tests against the application being hosted on the
@@ -179,13 +179,13 @@ development server.
 ## Updating Angular
 
 Previously we recommended that you merge in changes to angular-seed into your own fork of the project.
-Now that the angular framework library code and tools are acquired through package managers (npm and
+Now that the angular framework library code and tools are acquired through package managers (yarn and
 bower) you can use these tools instead to update the dependencies.
 
 You can update the tool dependencies by running:
 
 ```
-npm update
+yarn upgrade
 ```
 
 This will find the latest versions that match the version ranges specified in the `package.json` file.
@@ -207,7 +207,7 @@ inject a piece of Angular JavaScript into the HTML page.  The project has a pred
 do this.
 
 ```
-npm run update-index-async
+yarn run update-index-async
 ```
 
 This will copy the contents of the `angular-loader.js` library file into the `index-async.html` page.
@@ -226,11 +226,11 @@ etc to function properly when an html page is opened via `file://` scheme instea
 ### Running the App during Development
 
 The angular-seed project comes preconfigured with a local development webserver.  It is a node.js
-tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
-install the tool globally:
+tool called [http-server][http-server].  You can start this webserver with `yarn start` but you may choose to
+install the tool:
 
 ```
-sudo npm install -g http-server
+sudo yarn global add http-server
 ```
 
 Then you can start your own development web server to serve static files from a folder by
@@ -288,7 +288,7 @@ For more information on AngularJS please check out http://angularjs.org/
 
 [git]: http://git-scm.com/
 [bower]: http://bower.io
-[npm]: https://www.npmjs.org/
+[yarn]: https://yarnpkg.com
 [node]: http://nodejs.org
 [protractor]: https://github.com/angular/protractor
 [jasmine]: http://jasmine.github.io
