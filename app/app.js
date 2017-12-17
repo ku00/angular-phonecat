@@ -1,0 +1,16 @@
+import 'bower_components/jquery/dist/jquery';
+import 'bower_components/angular/angular';
+import 'bower_components/angular-animate/angular-animate';
+import 'bower_components/angular-resource/angular-resource';
+import 'bower_components/angular-route/angular-route';
+import 'app.module';
+import 'app.config';
+import 'app.animations';
+import 'core/core.module';
+import 'core/phone/phone.module';
+import 'core/phone/phone.service';
+import 'core/checkmark/checkmark.filter';
+import 'phone-list/phone-list.module';
+import 'phone-list/phone-list.component';
+import 'phone-detail/phone-detail.module';
+import 'phone-detail/phone-detail.component';
