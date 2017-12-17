@@ -20,6 +20,7 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "yarn install",
+    "build": "webpack --config webpack.config.js",
     "start": "http-server -a localhost -p 8000 -c-1 ./app",
     "pretest": "yarn install",
     "test": "karma start karma.conf.js",
