@@ -8,13 +8,9 @@ const config = {
     filename: 'bundle.js'
   },
 
-  devtool: 'source-map',
-
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true
-    })
-  ]
+  devServer: {
+    contentBase: 'app'
+  }
 };
 
 module.exports = config;
